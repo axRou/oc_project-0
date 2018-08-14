@@ -47,16 +47,29 @@ public class Product {
 		this.details = details;
 	}
 
+    /**
+     *Add one condition to the quantity of the product: quantity can be >= 0
+     */
+
 	public int getQuantity() {
-		return quantity;
+        if (quantity < 0 ) {
+            return 0;
+        } else {return quantity;}
+
 	}
 
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 
+    /**
+     *Add two condition to the price of the product: 0 > Price < 1000
+     */
+
 	public double getPrice() {
-		return price;
+        if (price < 0) { return 0.0; }
+        else if (price > 1000) { return 1000;}
+        else { return price;}
 	}
 
 	public void setPrice(double price) {
