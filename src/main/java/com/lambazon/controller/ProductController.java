@@ -29,10 +29,16 @@ public class ProductController {
 		model.addAttribute("prod", productService.product(id));
 		return "product";
 	}
-	
+
+    /**
+     * The method totalInventoryAmount is correctly written !!!!!!!!!
+     * First, defined the object "totalInventoryAmount" to 0.0
+     * It used the loop "for" each_product_add "getInventoryPrice" to "totalInventoryAmount"
+     *
+     * Good Job.
+     */
+
 	private double calculateTotalInventoryAmount() {
-		// TODO Auto-generated method stub
-		// return 123456.78;
 		
 		double totalInventoryAmount = 0.0;
 		for (Product p : productService.products()) {
