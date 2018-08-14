@@ -63,8 +63,12 @@ public class Product {
 		this.price = price;
 	}
 
+
+	/**
+	 * Configuration of the method getInventoryPrice wich calculate the total amount of the product in stock
+	 */
+
 	public double getInventoryPrice() {
-		// TODO Auto-generated method stub
-		return 0.0;
+		return quantity*price;
 	}
 }
