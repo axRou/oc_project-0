@@ -79,9 +79,14 @@ public class Product {
 
 	/**
 	 * Configuration of the method getInventoryPrice wich calculate the total amount of the product in stock
+     *
+     *UP TO DATE --> multiple the two method for respect the rules <-------------
+     *-------------> #############   Quantity >= 0 ################<-------------
+     *-------------> ############ 0 >= Price <= 1000 ##############<-- UP TO DATE
+     *
 	 */
 
 	public double getInventoryPrice() {
-		return quantity*price;
+		return getQuantity()*getPrice();
 	}
 }
