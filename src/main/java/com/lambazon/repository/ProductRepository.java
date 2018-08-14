@@ -14,7 +14,12 @@ import com.lambazon.domain.Product;
 public class ProductRepository {
 	
 	private static Map<Integer, Product> products = new HashMap<>();
-	
+
+	/**
+	 * You can find below the method "generateProductData" wich generate the list of product
+	 * I've added two products
+	 */
+
 	private static void generateProductData() {
 		int id=0;
 		products.put(++id, new Product(id, 10, 92.50, "Echo Dot", "(2nd Generation) - Black"));
@@ -22,6 +27,9 @@ public class ProductRepository {
 		products.put(++id, new Product(id, 30, 69.99, "JVC HAFX8R Headphone", "Riptidz, In-Ear"));
 		products.put(++id, new Product(id, 40, 32.50, "VTech CS6114 DECT 6.0", "Cordless Phone"));
 		products.put(++id, new Product(id, 50, 895.00, "NOKIA OEM BL-5J", "Cell Phone "));
+		products.put(++id, new Product(id, 78, 149, "Google Home", "Google assistant for Home"));
+		products.put(++id, new Product(id, 12, 499.00, "Huawei Mate 10 pro", "Cell Phone "));
+
 	}
 	
 	public List<Product> products() {
