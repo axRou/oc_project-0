@@ -30,13 +30,7 @@ public class ProductController {
 		return "product";
 	}
 
-    /**
-     * The method totalInventoryAmount is correctly written !!!!!!!!!
-     * First, defined the object "totalInventoryAmount" to 0.0
-     * It used the loop "for" each_product_add "getInventoryPrice" to "totalInventoryAmount"
-     *
-     * Good Job.
-     */
+
 
 	private double calculateTotalInventoryAmount() {
 		
@@ -46,7 +40,14 @@ public class ProductController {
 		}
 		
 		return totalInventoryAmount;
-		
+
+		/*
+		The method totalInventoryAmount is correctly written !!!!!!!!!
+     	First, defined the object "totalInventoryAmount" to 0.0
+     	It used the loop "for" each_product_add "getInventoryPrice" to "totalInventoryAmount"
+
+     	Good Job.
+     	*/
 		
 	}
 }

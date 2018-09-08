@@ -47,29 +47,26 @@ public class Product {
 		this.details = details;
 	}
 
-    /**
-     *Add one condition to the quantity of the product: quantity can be >= 0
-     */
+
 
 	public int getQuantity() {
         if (quantity < 0 ) {
             return 0;
         } else {return quantity;}
-
+        /* Add one condition to the quantity of the product: quantity can be >= 0 */
 	}
 
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 
-    /**
-     *Add two condition to the price of the product: 0 > Price < 1000
-     */
+
 
 	public double getPrice() {
         if (price < 0) { return 0.0; }
         else if (price > 1000) { return 1000;}
         else { return price;}
+        /* Add two condition to the price of the product: 0 > Price < 1000 */
 	}
 
 	public void setPrice(double price) {
@@ -77,16 +74,14 @@ public class Product {
 	}
 
 
-	/**
-	 * Configuration of the method getInventoryPrice wich calculate the total amount of the product in stock
-     *
-     *UP TO DATE --> multiple the two method for respect the rules <-------------
-     *-------------> #############   Quantity >= 0 ################<-------------
-     *-------------> ############ 0 >= Price <= 1000 ##############<-- UP TO DATE
-     *
-	 */
 
 	public double getInventoryPrice() {
 		return getQuantity()*getPrice();
+		/*
+		Configuration of the method getInventoryPrice wich calculate the total amount of the product in stock
+	    UP TO DATE --> multiple the two method for respect the rules <-------------
+	    -------------> #############   Quantity >= 0 ################<-------------
+	    -------------> ############ 0 >= Price <= 1000 ##############<-- UP TO DATE
+	    */
 	}
 }
